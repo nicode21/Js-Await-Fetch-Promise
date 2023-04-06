@@ -1,26 +1,28 @@
 "use strict";
 
-fetch('https://jsonplaceholder.typicode.com/comments')
-  .then(response => response.json())
-  .then(comments => {
+document.querySelector("button").addEventListener("click", function () {
+  fetch('https://jsonplaceholder.typicode.com/comments')
+    .then(response => response.json())
+    .then(comments => {
 
-    let str = "";
+      let str = "";
 
-    let tbody = document.querySelector("tbody");
+      let tbody = document.querySelector("tbody");
 
-    comments.forEach(comment => {
+      comments.forEach(comment => {
 
-      str +=
-        `<tr>
+        str +=
+          `<tr>
          <td>${comment.postId}</td>
          <td>${comment.name}</td>
          <td>${comment.email}</td>
          <td>${comment.body}</td>
          </tr>`
-    });
+      });
 
-    tbody.innerHTML = str;
-  })
+      tbody.innerHTML = str;
+    })
+})
 
 
 /*

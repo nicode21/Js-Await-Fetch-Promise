@@ -1,3 +1,15 @@
 thead tr th:nth-child(1) {
   width: 7%;
 }
+
+button {
+  align-self: center;
+  height: 40px;
+  width: 300px;
+  border: none;
+  border-radius: 20px;
+  background-color: rgb(98, 195, 255);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
